@@ -16,18 +16,19 @@ class PatientSeeder extends Seeder
         DB::table('patients')->delete();
         $faker = Faker::create();
         echo "[Seed] Table 'patients'\n";
-        foreach(range(1, 200) as $i) {
+        foreach(range(1, 80) as $i) {
             Patient::create([
                 'name'              => $faker->firstName,
                 'lastname'          => $faker->lastName,
                 'jobtitle'          => $faker->jobTitle,
                 'cep'               => $faker->numerify('#####-###'),
                 'street'            => $faker->streetName,
+                'number'            => $faker->buildingNumber(),
                 'district'          => $faker->word,
                 'state'             => $faker->state,
                 'city'              => $faker->city,
-                'cellphone'         => $faker->numerify('(##) ####-####'),
-                'phone'             => $faker->numerify('(##) #####-####'),
+                'cellphone'         => $faker->numerify('(##) #####-####'),
+                'phone'             => $faker->numerify('(##) ####-####'),
                 'email'             => $faker->companyEmail
             ]);
         }

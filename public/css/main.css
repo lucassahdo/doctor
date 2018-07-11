@@ -1,3 +1,12 @@
+.logo-main {
+    font-weight: 600;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .loading-layer {
   width: 100%;
   height: 100%;
@@ -17,6 +26,10 @@
   display: block;
   position: relative;
   top: 45%;
+}
+
+.option-new {
+  background: #e6e6e6 !important;
 }
 
 .card {
@@ -80,17 +93,10 @@
 
 ul.pagination {
   padding: 35px 0 15px 0;
-  width: 100%;
-  display: block;
-}
-
-ul.pagination li {
-  float: left;
 }
 
 ul.pagination li>a,
 ul.pagination li>span {
-  width: 45px;
   padding: 5px 10px;
   display: block;
   background: #dfdfdf;

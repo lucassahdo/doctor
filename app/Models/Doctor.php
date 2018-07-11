@@ -9,9 +9,11 @@ class Doctor extends Model
     protected $fillable = [
         'name',
         'lastname',
+        'user',
         'function',
         'cep',
-        'street',        
+        'street',       
+        'number', 
         'district',
         'state',
         'city',                 

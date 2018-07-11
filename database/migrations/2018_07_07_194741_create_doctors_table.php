@@ -17,9 +17,15 @@ class CreateDoctorsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('lastname');
+            $table->integer('user')->unique()->unsigned();       
+            $table->foreign('user')
+                  ->references('id')->on('users')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
             $table->string('function');
             $table->string('cep');
             $table->string('street');
+            $table->string('number');
             $table->string('district');
             $table->string('state');
             $table->string('city');                 

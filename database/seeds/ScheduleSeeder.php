@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Schedule;
 use App\Models\Doctor;
 use App\Models\Patient;
+use App\Models\User;
 use Faker\Factory as Faker;
 
 class ScheduleSeeder extends Seeder
@@ -18,14 +19,15 @@ class ScheduleSeeder extends Seeder
         DB::table('schedules')->delete();
         $faker = Faker::create();
         echo "[Seed] Table 'schedules'\n";
-        foreach(range(1, 200) as $i) {            
+        foreach(range(1, 65) as $i) {            
             Schedule::create([
+                'purpose'           => $faker->word,
+                'details'           => $faker->text,
                 'doctor'            => Doctor::inRandomOrder()->first()->id,
                 'patient'           => Patient::inRandomOrder()->first()->id,
-                'date'              => $faker->date($format = 'Y-m-d', $max = 'now'),
-                'time'              => $faker->time($format = 'H:i:s', $max = 'now'),
-                'name'              => $faker->word,
-                'description'       => $faker->text
+                'created_by'        => factory(App\Models\User::class)->create()->id,
+                'date'              => $faker->dateTimeBetween($startDate = '-6 months', $max = '+2 months'),
+                'time'              => $faker->time($format = 'H:00', $max = 'now')
             ]);
         }
     }

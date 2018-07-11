@@ -12,6 +12,7 @@ class Patient extends Model
         'jobtitle',
         'cep',
         'street',
+        'number',
         'district',
         'state',
         'city',                 

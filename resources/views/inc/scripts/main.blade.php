@@ -3,6 +3,7 @@
 <script src="/js/core/bootstrap.min.js"></script>
 <script src="/js/plugins/perfect-scrollbar.jquery.min.js"></script>
 <script src="/js/plugins/moment.min.js"></script>
+<script src="/js/plugins/locale_moment_pt-br.js"></script>
 <script src="/js/plugins/bootstrap-switch.js"></script>
 <script src="/js/plugins/sweetalert2.min.js"></script>
 <script src="/js/plugins/jquery.validate.min.js"></script>

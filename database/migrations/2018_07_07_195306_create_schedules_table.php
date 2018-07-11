@@ -14,15 +14,19 @@ class CreateSchedulesTable extends Migration
     public function up()
     {    
         Schema::create('schedules', function (Blueprint $table) {
-            $table->increments('id');            
+            $table->increments('id');           
+            $table->string('purpose');
+            $table->string('details'); 
             $table->integer('doctor')->unsigned();
             $table->foreign('doctor')->references('id')->on('doctors');
             $table->integer('patient')->unsigned();       
             $table->foreign('patient')->references('id')->on('patients');
+            $table->integer('created_by')->unsigned();       
+            $table->foreign('created_by')->references('id')->on('users')     
+                                ->onDelete('cascade')
+                                ->onUpdate('cascade');
             $table->date('date');
             $table->string('time');
-            $table->string('name');
-            $table->string('description');
             $table->timestamps();
         });
     }

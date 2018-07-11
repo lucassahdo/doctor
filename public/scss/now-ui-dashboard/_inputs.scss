@@ -53,7 +53,6 @@
 
     .open &{
         border-radius: $border-radius-large $border-radius-large 0 0;
-        border-bottom-color: transparent;
     }
 
     & + .input-group-append .input-group-text,

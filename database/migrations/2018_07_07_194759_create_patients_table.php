@@ -20,6 +20,7 @@ class CreatePatientsTable extends Migration
             $table->string('jobtitle');
             $table->string('cep');
             $table->string('street');
+            $table->string('number');
             $table->string('district');
             $table->string('state');
             $table->string('city');                 

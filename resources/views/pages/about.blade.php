@@ -8,10 +8,10 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-6">
-                    <h3>> Desafio Vercan</h3>
+                    <h3>> Desafio MAZZA</h3>
                     <p>
-                        Projeto proposto pela Vercan como teste de conhecimento do framework Laravel. O objetivo do projeto é fornecer um ambiente
-                        crud para genrenciamento de pessoas físicas ou jurídicas.
+                        Projeto proposto pela MAZZA como teste de conhecimento do framework Laravel. O objetivo do projeto é fornecer um ambiente
+                        crud para genrenciamento de pessoas consultas médicas e gestão de pessoas.
                     </p>
 
                     <br>
@@ -25,7 +25,7 @@
                     <p>6. Gulp</p>
 
                     <h4>- Backend:</h4>
-                    <p>1. PHP 7.0 com o framework Laravel 5.3</p>
+                    <p>1. PHP 7.0 com o framework Laravel 5.5</p>
                     <p>2. Mysql</p>
                     <p>3. Nginx</p>
                     <p>4. Digital Ocean - Ubuntu 16.04</p>
@@ -34,7 +34,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h3>> Links</h3>
-                            <button class="btn btn-github" onclick="window.open('https://github.com/lucassahdo/vercan','_blank')">
+                            <button class="btn btn-github" onclick="window.open('https://github.com/lucassahdo/doctor','_blank')">
                                 <i class="fab fa-github"></i> Código fonte no Github
                             </button>
                         </div>

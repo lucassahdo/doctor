@@ -72,7 +72,7 @@
         }
         [data-toggle="collapse"]~div>ul>li.active>a {
             .sidebar-mini-icon {
-                color: #121212;
+                color: #00ad9a;
             }
         }
     }
@@ -151,9 +151,9 @@
             &.active>a[data-toggle="collapse"] {
                 background-color: #fff;
                 box-shadow: none;
-                color: #121212;
+                color: #00ad9a;
                 i {
-                    color: #121212;
+                    color: #00ad9a;
                 }
                 &+div .nav .active a {
                     background-color: transparent;
@@ -164,7 +164,7 @@
                         background-color: $white-color;
                         border-radius: 30px;
                         box-shadow: $box-shadow;                        
-                        color: #000000;
+                        color: #00ad9a;
                         height: 33px;
                         width: calc(100% - 5px);
                         top: 0;
@@ -305,17 +305,17 @@
         @include icon-gradient($default-color);
         z-index: 3;
     }
-    &[data-color="hintify"] {
-        &:after {
-            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #00a1cb 0%, #00c46e 100%) repeat scroll 0 0;
-            background: rgba(0, 0, 0, 0) linear-gradient(to right, #00a1cb 0%, #00c46e 100%) repeat scroll 0 0;
+    &[data-color="doctor"] {
+        &:after {          
+            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #00ad9a 0%, #008677 100%) repeat scroll 0 0;
+            background: rgba(0, 0, 0, 0) linear-gradient(to right, #00ad9a 0%, #008677 100%) repeat scroll 0 0;
         }
         
         .nav li.active > a:not([data-toggle="collapse"]){
-            color: #00a1cb;
+            color: #00ad9a;
         
             i{
-                color: #00a1cb;
+                color: #00ad9a;
             }
         }   
     }
@@ -532,9 +532,9 @@
     padding-top: 80px;
     padding-bottom: 45px;
     background: #141E30;
-    /* fallback for old browsers */
-    background: -webkit-gradient(linear, left top, right top, from(#565656), color-stop(60%, #000000), to(#000000));
-    background: linear-gradient(to right, #565656 0%, #000000 60%, #000000 100%);
+    /* fallback for old browsers */   
+    background: -webkit-gradient(linear, left top, right top, from(#001b16), color-stop(60%, #00312a), to(#041f1b));
+    background: linear-gradient(to right, #001b16 0%, #00312a 60%, #041f1b 100%);
     position: relative;
     overflow: hidden;
     .header {

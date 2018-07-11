@@ -1,7 +1,16 @@
 @extends('layout.base') 
 
+@section('styles')
+<link rel="stylesheet" href="/css/pages/dashboard.css"/>
+@endsection
+
 @section('content')
-<div class="panel-header panel-header-sm">
+<div class="panel-header panel-header-lg">  
+    <div class="bigDashboardChart_title_area">
+        <h2 class="title_bigDashboardChart">Consultas</h2>
+        <p class="subtitle_bigDashboardChart">/ mês</p>
+    </div>  
+    <canvas id="bigDashboardChart"></canvas>
 </div>
 <div class="content">
     <div class="row">
@@ -81,7 +90,13 @@
                         <table class="table">
                             <thead class=" text-primary">
                                 <th>
-                                    Doutor  
+                                    N
+                                </th>
+                                <th>
+                                    Objetivo
+                                </th>
+                                <th>
+                                    Médico  
                                 </th>
                                 <th>
                                     Paciente
@@ -91,14 +106,17 @@
                                 </th>
                                 <th>
                                     Hora
-                                </th>
-                                <th class="text-right">
-                                    Tipo de consulta
-                                </th>
+                                </th>                               
                             </thead>
                             <tbody>
-                                @foreach ($appointments as $item)
+                                @foreach ($appointments as $i => $item)
                                     <tr>
+                                        <td>
+                                            {{ $i + 1 }}
+                                        </td>
+                                        <td>
+                                            {{ $item['purpose'] }}
+                                        </td>
                                         <td>
                                             {{ $item['doctor']['name'] . ' ' . $item['doctor']['lastname']}}
                                         </td>
@@ -110,10 +128,7 @@
                                         </td>
                                         <td>
                                             {{ $item['time'] }}
-                                        </td>
-                                        <td class="text-right">
-                                            {{ $item['name'] }}
-                                        </td>
+                                        </td>                                        
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -124,4 +139,25 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    dashboard = {};
+    dashboard.labels = [];
+    dashboard.data = [];
+
+    @foreach ($labels as $lab) 
+        console.log({{ $lab }});
+        dashboard.labels.push("{{ $lab }}");
+    @endforeach
+
+    @foreach ($data as $dat) 
+        dashboard.data.push({{ $dat }});
+    @endforeach
+
+    console.log('Dashboard: ');
+    console.log(dashboard);
+</script>
+<script src="/js/pages/dashboard.js"></script>
 @endsection

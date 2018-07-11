@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:api');
+
+Route::get('/doctors', ['as' => 'doctors.all', 'uses' => 'ApiController@doctors']);
+Route::get('/patients', ['as' => 'patients.all', 'uses' => 'ApiController@patients']);
+Route::get('/schedules', ['as' => 'schedules.all', 'uses' => 'ApiController@schedules']);
+
+

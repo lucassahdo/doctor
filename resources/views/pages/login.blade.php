@@ -27,7 +27,7 @@
                                 <div class="card card-login card-plain">
                                     <div class="card-header ">
                                         <div class="logo-container">
-                                            <img src="http://www.vercan.com.br/assets/images/global/logo.png?1395258912" alt="">
+                                            <h1 class="logo-text">DOCTOR</h1>
                                         </div>
                                     </div>
                                     <div class="card-body ">
